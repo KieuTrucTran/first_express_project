@@ -2,6 +2,11 @@
 const port = 3000,
 express = require("express"),
 app = express();
+
+app.post("/contact", (req, res) => {
+  res.send("Contact information submitted successfully.");
+});
+
 app.get("/", (req, res) => {
   console.log(req.params);
   console.log(req.body);
